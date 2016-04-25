@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:osgi="http://www.springframework.org/schema/osgi"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
+       http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
+
+
+  <camelContext xmlns="http://camel.apache.org/schema/spring">
+  <route>
+    <from uri="pop3:imap-mail.outlook.com:993?runLoggingLevel=OFF&amp;scheduler=quartz2&amp;password=moonglum.62r&amp;username=rsraszka@hotmail.com&amp;delay=300000" id="Hotmail Account">
+      <description>imap server access for Hotmail</description>
+    </from>
+    <log message="Hotmail:" loggingLevel="INFO" logName="hotmail.log" marker="Hotmail" id="Hotmail Log"/>
+  </route>
+</camelContext>
+
+</beans>
