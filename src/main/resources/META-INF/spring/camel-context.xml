@@ -10,7 +10,7 @@
 
   <camelContext xmlns="http://camel.apache.org/schema/spring">
   <route>
-    <from uri="imaps:imap-mail.outlook.com:993?runLoggingLevel=OFF&amp;scheduler=quartz2&amp;password=moonglum.62r&amp;username=rsraszka@hotmail.com&amp;delay=300000" id="Hotmail Account">
+    <from uri="imaps:imap-mail.outlook.com:993?runLoggingLevel=OFF&amp;scheduler=quartz2&amp;password=&amp;username=rsraszka@hotmail.com&amp;delay=300000" id="Hotmail Account">
       <description>imap server access for Hotmail</description>
     </from>
     <log message="Hotmail:" loggingLevel="INFO" logName="hotmail.log" marker="Hotmail" id="Hotmail Log"/>
